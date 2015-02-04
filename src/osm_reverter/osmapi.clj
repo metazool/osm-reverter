@@ -1,7 +1,6 @@
 (ns osm-reverter.osmapi
-  (:gen-class))
 
-(defn get
+(defn geturl
   [url]
   )
 
