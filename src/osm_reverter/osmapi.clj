@@ -1,7 +1,10 @@
 (ns osm-reverter.osmapi
+(:require [clj-http.client :as client])
+)
 
 (defn geturl
   [url]
+  (client/get url)
   )
 
 (defn get_with_credentials
@@ -14,10 +17,12 @@
 
 (defn put
   [url body]
+  (client/put {:body body})
   )
 
 (defn post
   [url body]
+  (client/post {:body body})
   )
 
 (defn delete

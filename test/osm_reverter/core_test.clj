@@ -1,7 +1,7 @@
 (ns osm-reverter.core-test
   (:require [clojure.test :refer :all]
             [osm-reverter.core :refer :all]
-            [osm-reverter.osmapi :as api]
+            [osm-reverter.osmapi :refer :all]
 ))
 
 (deftest a-test
@@ -10,6 +10,7 @@
 
 (deftest get-test
   (testing "GET request"
-    (let [result (osm-reverter.osmapi.geturl "http://www.openstreetmap.org")]
-    (is (not empty? result))
+    (let [result (geturl "http://www.openstreetmap.org")]
+    (println result)
+    (is (not (empty? result)))
    )))
