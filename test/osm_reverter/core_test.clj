@@ -14,3 +14,11 @@
     (println result)
     (is (not (empty? result)))
    )))
+
+(deftest config-test
+  (testing "read the config"
+    (let [result (readconfig)]
+    (println result)
+    (is (not (empty? result)))
+   )))
+
